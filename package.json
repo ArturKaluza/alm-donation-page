@@ -1,0 +1,15 @@
+{
+  "name": "alm2",
+  "version": "1.0.0",
+  "description": "second task",
+  "main": "mian.js",
+  "scripts": {
+    "compile:sass": "node-sass style/scss/style.scss style/style.css",
+    "compile:sass-watch": "node-sass style/scss/style.scss style/style.css -w"
+  },
+  "author": "Artur Kaluza",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}
