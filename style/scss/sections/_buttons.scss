@@ -1,0 +1,29 @@
+.buttons {
+    width: 502px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    &__save {
+        @include btn;
+        transition: .3s ease;
+
+        &:hover {
+            background: darken($color-white, 10%);
+        }
+    }
+
+    &__tell {
+        @include btn;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        transition: .3s ease;
+
+        &:hover {
+            background: darken($color-white, 10%);
+        }
+    }
+}

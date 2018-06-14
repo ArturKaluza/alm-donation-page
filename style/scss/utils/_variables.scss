@@ -1,6 +1,7 @@
 
 $font-size-default: 24px;
-$font-size-big: 30px;
+$font-size-big: 28px;
+$font-size-small: 20px;
 
 $font-color-grey: #555;
 $font-color-blue: #0964AA;
@@ -11,3 +12,15 @@ $color-white: #f4f4f4;
 $color-grey: #ccc;
 
 
+@mixin btn {
+    width: 230px;
+    height: 50px;
+    background: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 3px;
+    color: $font-color-grey;
+    font-family: "Lato", sans-serif;
+    font-size: $font-size-small;
+    font-weight: 700;
+    cursor: pointer;
+}

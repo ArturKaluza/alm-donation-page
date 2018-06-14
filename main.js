@@ -4,11 +4,12 @@ const progress = document.querySelector('.progressiveBar__value');
 const thanks = document.querySelector('.main__thanks');
 
 const form = document.getElementById('form');
+const inputElem = document.getElementById('value');
 
 const btn50 = document.getElementById('btn50');
 const text = document.querySelector('.main__toggle-text');
 
-const saveBtn = document.querySelector('.main__buttons-save');
+const saveBtn = document.querySelector('.buttons__save');
 
 // localstorage 
 const storage = localStorage;
@@ -16,6 +17,8 @@ const storage = localStorage;
 // set progressive bar initial value
 progress.style.width = chceckProgress();
 
+// set input value
+inputElem.value = chceckInputValue();
 
 // listeners
 form.addEventListener('submit', donate);
@@ -36,6 +39,7 @@ function donate(e) {
     
     showThanks();
 
+
     input.value = '';
 }
 
@@ -48,8 +52,12 @@ function showThanks() {
 }
 
 function save() {
+    // save progressBar
     const currentWidth = progress.style.width;
     storage.setItem('progress', JSON.stringify(currentWidth));
+
+    // save input value
+    storage.setItem('input', JSON.stringify(inputElem.value));
 }
 
 function showText() {
@@ -65,4 +73,11 @@ function chceckProgress() {
     return '53px';
 }
 
+function chceckInputValue() {
+    const val = JSON.parse(storage.getItem('input'))
 
+    if (val !== null) {
+        return val;
+    }
+    return '';
+}
