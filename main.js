@@ -72,7 +72,7 @@ function showText() {
 
 function chceckProgress() {
     const prog = JSON.parse(storage.getItem('progress'));
-        
+    
     if (prog !== null) {
         return prog;
     }
