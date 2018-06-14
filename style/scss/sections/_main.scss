@@ -1,0 +1,84 @@
+.main {
+    background: $color-white;
+    border: 1px solid $color-grey;
+    font-size: $font-size-default;
+    width: 500px;
+    padding: 30px;
+    margin-bottom: 40px;
+    
+
+    &__content {
+        color: $font-color-grey;
+        margin-bottom: 40px;
+
+        &-header {
+            font-size: $font-size-default;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        &-span {
+            color: $color-primary;
+            font-weight: 700;
+        }
+
+        &-text {
+            
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &-input {
+            width: 200px;
+            height: 50px;
+            font-size: $font-size-big;
+            border: 1px solid $color-grey;
+            border-radius: 3px;
+
+            &:focus {
+                background: #fffaaa;
+            }
+        }
+
+        &-button {
+            width: 200px;
+            height: 50px;
+            font-size: $font-size-big;
+            border: none;
+            border-radius: 3px;
+            color: $color-white;
+            background: $color-secondary;
+
+            &:hover {
+                background: lighten($color-secondary, 20%)
+            }
+        }
+    }
+
+    &__toggle {
+
+
+        &-btn {
+            color: $font-color-blue;
+            text-decoration: none;
+        }
+
+        &-text {
+            display: block;
+            color: $font-color-grey;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+        }
+    }
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
