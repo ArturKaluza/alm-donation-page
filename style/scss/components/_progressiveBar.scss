@@ -1,5 +1,16 @@
 .progressiveBar {
+    width: 502px;
+    border: 1px solid $color-grey;
+    border-bottom: none;
+
+    &__container {
     height: 25px;
-    background: orangered;
-    width: 500px;
+    background: $color-white;
+    }
+
+    &__value {
+        height: 25px;
+        background: orangered;
+    }
+    
 }

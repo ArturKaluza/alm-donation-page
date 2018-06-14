@@ -2,7 +2,7 @@
     background: $color-white;
     border: 1px solid $color-grey;
     font-size: $font-size-default;
-    width: 500px;
+    width: 502px;
     padding: 30px;
     margin-bottom: 40px;
     
@@ -25,6 +25,14 @@
         &-text {
             
         }
+    }
+
+    &__thanks {
+        margin-bottom: 20px;
+        background: $color-secondary;
+        color: $color-white;
+        padding: 10px 20px;
+        display: none;
     }
 
     &__form {
@@ -81,4 +89,8 @@
 .visible {
     visibility: visible;
     opacity: 1;
+}
+
+.show {
+    display: block;
 }
