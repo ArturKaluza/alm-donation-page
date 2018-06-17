@@ -1,0 +1,48 @@
+.hiddenText {
+    
+    &__btn {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     
+        &-show {
+            background: transparent;
+            border: none;
+            color: $font-color-blue;
+            font-size: 20px;
+        }
+
+        &-close {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid black;
+            border-radius: 3px;
+            background: red;
+            color: $color-white;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__content {
+        color: $color-grey-dark;
+        font-size: $font-size-small;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+.show-closeBtn {
+    visibility: visible;
+    opacity: 1;
+}

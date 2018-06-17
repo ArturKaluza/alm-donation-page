@@ -82,30 +82,6 @@
             flex-direction: column;
         }
     }
-
-    &__toggle {
-
-
-        &-btn {
-            color: $font-color-blue;
-            text-decoration: none;
-        }
-
-        &-text {
-            display: block;
-            color: $font-color-grey;
-            opacity: 0;
-            visibility: hidden;
-            transition: all .3s;
-        }
-    }
 }
 
-.visible {
-    visibility: visible;
-    opacity: 1;
-}
 
-.show {
-    display: block;
-}

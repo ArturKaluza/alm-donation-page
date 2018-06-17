@@ -7,8 +7,9 @@ const thanks = document.querySelector('.main__thanks');
 const form = document.getElementById('form');
 const inputElem = document.getElementById('value');
 
-const btn50 = document.getElementById('btn50');
-const text = document.querySelector('.main__toggle-text');
+const textShowBtn = document.querySelector('.hiddenText__btn-show');
+const textContent = document.querySelector('.hiddenText__content');
+const textCloseBtn = document.querySelector('.hiddenText__btn-close');
 
 const saveBtn = document.querySelector('.buttons__save');
 
@@ -27,7 +28,9 @@ prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${500 -
 // listeners
 form.addEventListener('submit', donate);
 
-btn50.addEventListener('click', showText);
+//btn50.addEventListener('click', showText);
+textShowBtn.addEventListener('click', showText);
+textCloseBtn.addEventListener('click', hideText);
 
 saveBtn.addEventListener('click', save);
 
@@ -67,7 +70,13 @@ function save() {
 }
 
 function showText() {
-    text.classList.toggle('visible');
+    textContent.classList.add('show');
+    textCloseBtn.classList.add('show-closeBtn');
+}
+
+function hideText() {
+    textContent.classList.remove('show');
+    textCloseBtn.classList.remove('show-closeBtn');
 }
 
 function chceckProgress() {

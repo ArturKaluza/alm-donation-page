@@ -72,22 +72,6 @@ body {
     @media (max-width: 500px) {
       .main__form {
         flex-direction: column; } }
-  .main__toggle-btn {
-    color: #0964AA;
-    text-decoration: none; }
-  .main__toggle-text {
-    display: block;
-    color: #555;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s; }
-
-.visible {
-  visibility: visible;
-  opacity: 1; }
-
-.show {
-  display: block; }
 
 .buttons {
   max-width: 502px;
@@ -197,3 +181,40 @@ body {
       .progressiveBar:after {
         opacity: 1;
         top: -25px; } }
+
+.hiddenText__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .hiddenText__btn-show {
+    background: transparent;
+    border: none;
+    color: #0964AA;
+    font-size: 20px; }
+  .hiddenText__btn-close {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: red;
+    color: #f4f4f4;
+    visibility: hidden;
+    opacity: 0; }
+
+.hiddenText__content {
+  color: #333;
+  font-size: 20px;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease; }
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  height: auto; }
+
+.show-closeBtn {
+  visibility: visible;
+  opacity: 1; }
