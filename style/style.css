@@ -148,6 +148,12 @@ body {
     height: 25px;
     background: #f4f4f4;
     overflow: hidden; }
+  .progressiveBar:hover > .progressiveBar__tooltip {
+    opacity: 1;
+    width: 100%; }
+  .progressiveBar:hover::after {
+    opacity: 1;
+    top: -25px; }
   .progressiveBar__value {
     height: 25px;
     background: orangered; }
@@ -157,12 +163,14 @@ body {
     font-size: 24px;
     border-radius: 3px;
     max-width: 500px;
-    width: 100%;
+    width: 0;
     height: 60px;
     line-height: 60px;
     text-align: center;
     position: absolute;
-    top: -80px; }
+    top: -80px;
+    opacity: 0;
+    transition: all .3s ease-in-out; }
     .progressiveBar__tooltip-span {
       font-weight: 700; }
     @media (max-width: 500px) {
@@ -170,7 +178,9 @@ body {
         height: 40px;
         line-height: 40px;
         font-size: 20px;
-        top: -60px; } }
+        top: -60px;
+        opacity: 1;
+        width: 100%; } }
   .progressiveBar:after {
     content: '';
     width: 0;
@@ -179,5 +189,11 @@ body {
     border-right: 15px solid transparent;
     border-top: 20px solid #333;
     position: absolute;
-    top: -25px;
-    left: 80%; }
+    left: 80%;
+    top: 40%;
+    opacity: 0;
+    transition: .3s ease-in-out; }
+    @media (max-width: 500px) {
+      .progressiveBar:after {
+        opacity: 1;
+        top: -25px; } }
