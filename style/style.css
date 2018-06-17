@@ -37,6 +37,7 @@ body {
     margin-bottom: 20px;
     background: #2D882D;
     color: #f4f4f4;
+    font-weight: 400;
     padding: 10px 20px;
     display: none; }
   .main__form {
@@ -72,6 +73,9 @@ body {
     @media (max-width: 500px) {
       .main__form {
         flex-direction: column; } }
+
+.show {
+  display: block; }
 
 .buttons {
   max-width: 502px;
