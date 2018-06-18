@@ -11,7 +11,7 @@
         transition: .3s ease;
 
         &:hover {
-            background: darken($color-white, 10%);
+            background: darken($color-white-dark, 10%);
         }
 
         @media (max-width: 500px) {
@@ -29,7 +29,7 @@
         transition: .3s ease;
 
         &:hover {
-            background: darken($color-white, 10%);
+            background: darken($color-white-dark, 10%);
         }
 
         @media (max-width: 500px) {

@@ -6,7 +6,7 @@
     width: 100%;
     padding: 30px;
     margin-bottom: 20px;
-    
+        
 
     &__content {
         color: $font-color-grey;
@@ -25,6 +25,10 @@
 
         &-text {
             
+        }
+
+        &-donators {
+            font-weight: 700;
         }
     }
 

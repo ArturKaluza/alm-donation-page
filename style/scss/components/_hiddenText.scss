@@ -11,6 +11,11 @@
             border: none;
             color: $font-color-blue;
             font-size: 20px;
+            transition: .3s;
+
+            &:hover {
+                color: darken($font-color-blue, 10%);
+            }
         }
 
         &-close {

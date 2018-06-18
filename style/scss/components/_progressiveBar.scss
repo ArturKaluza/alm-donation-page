@@ -4,13 +4,12 @@
     border: 1px solid $color-grey;
     border-bottom: none;
     position: relative;
-    
+        
     &__container {
     height: 25px;
-    background: $color-white;
+    background: lighten($color-white-dark, 3%);
     overflow: hidden;
     }
-
    
     &:hover > &__tooltip  {
         opacity: 1;
@@ -24,7 +23,7 @@
 
     &__value {
         height: 25px;
-        background: orangered;
+        background: $color-primary;
     }
 
     &__tooltip {

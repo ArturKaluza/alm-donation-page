@@ -4,6 +4,8 @@ const prgoressTooltip = document.querySelector('.progressiveBar__tooltip');
 
 const thanks = document.querySelector('.main__thanks');
 
+const donators = document.querySelector('.main__content-donators');
+
 const form = document.getElementById('form');
 const inputElem = document.getElementById('value');
 
@@ -38,6 +40,11 @@ function donate(e) {
     e.preventDefault();
     const input = e.target.dollar;
     
+    // check input value
+    if (!input.value.trim()) {
+        return;
+    };
+
     // get width of progressBar value
     const parseValue = parseInt(progress.style.width);
        
@@ -48,6 +55,15 @@ function donate(e) {
 
     // set tooltip value
     prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${500 - parseInt(progress.style.width)}</span> still needed for this project`;
+    if (parseInt(progress.style.width) >= 500) {
+        prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">The project raised $${parseInt(progress.style.width) - 500} over a target.`;
+        
+        // disabled input
+        inputElem.setAttribute('disabled', null);
+    }
+
+    // increment numbers of donators
+    donators.innerHTML = parseInt(donators.innerHTML) + 1;
 
     input.value = '';
 }
