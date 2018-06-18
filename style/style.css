@@ -14,7 +14,7 @@ body {
   background: #f4f4f4; }
   @media (max-width: 402px) {
     body {
-      height: 900px; } }
+      height: 800px; } }
 
 .main {
   background: #f4f4f4;
@@ -90,7 +90,7 @@ body {
   border-bottom: none;
   position: relative; }
   .progressiveBar__container {
-    height: 25px;
+    height: 15px;
     background: #e7e7e7;
     overflow: hidden; }
   .progressiveBar:hover > .progressiveBar__tooltip {
@@ -101,7 +101,7 @@ body {
     opacity: 1;
     top: -25px; }
   .progressiveBar__value {
-    height: 25px;
+    height: 15px;
     background: #C04C0E; }
   .progressiveBar__tooltip {
     background: #444;

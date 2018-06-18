@@ -6,7 +6,7 @@
     position: relative;
         
     &__container {
-    height: 25px;
+    height: 15px;
     background: lighten($color-white-dark, 3%);
     overflow: hidden;
     }
@@ -23,7 +23,7 @@
     }
 
     &__value {
-        height: 25px;
+        height: 15px;
         background: $color-primary;
     }
 
