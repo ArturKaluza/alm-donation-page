@@ -10,12 +10,12 @@
 
     &__content {
         color: $font-color-grey;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
 
         &-header {
             font-size: $font-size-default;
             font-weight: 400;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         &-span {
@@ -36,7 +36,7 @@
         margin-bottom: 20px;
         background: $color-secondary;
         color: $color-white;
-        font-weight: 400;
+        font-weight: 300;
         padding: 10px 20px;
         display: none;
     }
@@ -45,12 +45,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         &-input {
             width: 200px;
             height: 50px;
-            font-size: $font-size-big;
+            font-size: $font-size-default;
             border: 1px solid $color-grey;
             border-radius: 3px;
 
@@ -67,7 +67,7 @@
         &-button {
             width: 200px;
             height: 50px;
-            font-size: $font-size-big;
+            font-size: $font-size-default;
             border: none;
             border-radius: 3px;
             color: $color-white;

@@ -19,7 +19,7 @@ const saveBtn = document.querySelector('.buttons__save');
 const storage = localStorage;
 
 // set progressive bar initial value
-progress.style.width = '57px';
+progress.style.width = '53px';
 
 // set input value
 inputElem.value = chceckInputValue();
@@ -56,7 +56,7 @@ function donate(e) {
     // set tooltip value
     prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${500 - parseInt(progress.style.width)}</span> still needed for this project`;
     if (parseInt(progress.style.width) >= 500) {
-        prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">The project raised $${parseInt(progress.style.width) - 500} over a target.`;
+        prgoressTooltip.innerHTML = `The project raised <span class="progressiveBar__tooltip-span">$${parseInt(progress.style.width) - 500}</span> over a target.`;
         
         // disabled input
         inputElem.setAttribute('disabled', null);
