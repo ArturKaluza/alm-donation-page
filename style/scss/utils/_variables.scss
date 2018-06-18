@@ -6,7 +6,7 @@ $font-size-small: 20px;
 $font-color-grey: #555;
 $font-color-blue: #33A6D2;
 
-$color-primary: #BB480D;
+$color-primary: #C04C0E;
 $color-secondary: #2D882D;
 $color-white: #f4f4f4;
 $color-white-dark: #dfdfdf;
@@ -25,4 +25,5 @@ $color-grey-dark: #444;
     font-size: $font-size-small;
     font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba($font-color-grey, .2);
 }

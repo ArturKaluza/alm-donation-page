@@ -24,7 +24,7 @@ progress.style.width = '57px';
 // set input value
 inputElem.value = chceckInputValue();
 
-// set toolrip initial value
+// set tooltip initial value
 prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${500 - parseInt(progress.style.width)}</span> still needed for this project`;
 
 // listeners
