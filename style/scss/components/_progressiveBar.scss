@@ -1,5 +1,5 @@
 .progressiveBar {
-    max-width: 502px;
+    max-width: 402px;
     width: 100%;
     border: 1px solid $color-grey;
     border-bottom: none;
@@ -32,7 +32,7 @@
         color: $color-white;
         font-size: $font-size-default;
         border-radius: 3px;
-        max-width: 500px;
+        max-width: 402px;
         width: 0;
         height: 60px;
         line-height: 60px;
@@ -47,7 +47,7 @@
             font-weight: 700;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 402px) {
             height: 40px;
             line-height: 40px;
             font-size: 20px;
@@ -71,7 +71,7 @@
         opacity: 0;
         transition: .3s ease-in-out;
 
-        @media (max-width: 500px) {
+        @media (max-width: 402px) {
             opacity: 1;
             top: -25px;
         }

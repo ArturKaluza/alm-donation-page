@@ -19,13 +19,16 @@ const saveBtn = document.querySelector('.buttons__save');
 const storage = localStorage;
 
 // set progressive bar initial value
-progress.style.width = '53px';
+progress.style.width = (57 * 0.8) + 'px';
+
+// set initial donate value
+let donVal = 500 - 57;
 
 // set input value
 inputElem.value = chceckInputValue();
 
 // set tooltip initial value
-prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${500 - parseInt(progress.style.width)}</span> still needed for this project`;
+prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${donVal}</span> still needed for this project`;
 
 // listeners
 form.addEventListener('submit', donate);
@@ -44,23 +47,26 @@ function donate(e) {
     if (!input.value.trim()) {
         return;
     };
-
+    
+    // update donVal
+    donVal = donVal - input.value;
+    
     // get width of progressBar value
-    const parseValue = parseInt(progress.style.width);
+    const parseValue = parseFloat(progress.style.width);
        
     // set new width
-    progress.style.width = parseValue + parseInt(input.value) + 'px';
+    progress.style.width = (parseValue) + (parseFloat(input.value) *  0.8) + 'px';
     
     showThanks();
 
     // set tooltip value
-    prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${500 - parseInt(progress.style.width)}</span> still needed for this project`;
-    if (parseInt(progress.style.width) >= 500) {
-        prgoressTooltip.innerHTML = `The project raised <span class="progressiveBar__tooltip-span">$${parseInt(progress.style.width) - 500}</span> over a target.`;
+    prgoressTooltip.innerHTML = `<span class="progressiveBar__tooltip-span">$${donVal}</span> still needed for this project`;
+    if (donVal <= 0) {
+        prgoressTooltip.innerHTML = `The project raised <span class="progressiveBar__tooltip-span">$${donVal}</span> over a target.`;
         
         // disabled input
         inputElem.setAttribute('disabled', null);
-    }
+        }
 
     // increment numbers of donators
     donators.innerHTML = parseInt(donators.innerHTML) + 1;

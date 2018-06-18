@@ -2,7 +2,7 @@
     background: $color-white;
     border: 1px solid $color-grey;
     font-size: $font-size-default;
-    max-width: 502px;
+    max-width: 402px;
     width: 100%;
     padding: 30px;
     margin-bottom: 20px;
@@ -48,24 +48,26 @@
         margin-bottom: 20px;
 
         &-input {
-            width: 200px;
+            width: 160px;
             height: 50px;
             font-size: $font-size-default;
+            font-weight: 700;
             border: 1px solid $color-grey;
             border-radius: 3px;
+            padding-left: 10px;
 
             &:focus {
                 background: #fffaaa;
             }
 
-            @media (max-width: 500px) {
+            @media (max-width: 402px) {
                 width: 100%;
                 margin-bottom: 20px;
             }
         }
 
         &-button {
-            width: 200px;
+            width: 160px;
             height: 50px;
             font-size: $font-size-default;
             border: none;
@@ -77,12 +79,12 @@
                 background: lighten($color-secondary, 20%)
             }
 
-            @media (max-width: 500px) {
+            @media (max-width: 402px) {
                 width: 100%;
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 402px) {
             
             flex-direction: column;
         }

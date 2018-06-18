@@ -1,5 +1,5 @@
 .buttons {
-    max-width: 502px;
+    max-width: 402px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@
             background: darken($color-white-dark, 10%);
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 402px) {
             width: 90%;
             margin-bottom: 20px;
         }
@@ -32,12 +32,12 @@
             background: darken($color-white-dark, 10%);
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 402px) {
             width: 90%;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 402px) {
         flex-direction: column;
     }
 }
