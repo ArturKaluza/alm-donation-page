@@ -19,7 +19,7 @@ const saveBtn = document.querySelector('.buttons__save');
 const storage = localStorage;
 
 // set progressive bar initial value
-progress.style.width = chceckProgress();
+progress.style.width = '57px';
 
 // set input value
 inputElem.value = chceckInputValue();
@@ -77,10 +77,6 @@ function showThanks() {
 }
 
 function save() {
-    // save progressBar
-    const currentWidth = progress.style.width;
-    storage.setItem('progress', JSON.stringify(currentWidth));
-
     // save input value
     storage.setItem('input', JSON.stringify(inputElem.value));
 }
@@ -93,15 +89,6 @@ function showText() {
 function hideText() {
     textContent.classList.remove('show');
     textCloseBtn.classList.remove('show-closeBtn');
-}
-
-function chceckProgress() {
-    const prog = JSON.parse(storage.getItem('progress'));
-    
-    if (prog !== null) {
-        return prog;
-    }
-    return '53px';
 }
 
 function chceckInputValue() {

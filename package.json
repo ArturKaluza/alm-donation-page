@@ -5,11 +5,15 @@
   "main": "mian.js",
   "scripts": {
     "compile:sass": "node-sass style/scss/style.scss style/style.css",
-    "compile:sass-watch": "node-sass style/scss/style.scss style/style.css -w"
+    "compile:sass-watch": "node-sass style/scss/style.scss style/style.css -w",
+    "start": "live-server",
+    "dev": "parallelshell \"npm run start\" \"npm run compile:sass-watch\""
   },
   "author": "Artur Kaluza",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.9.0"
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.0",
+    "parallelshell": "^3.0.2"
   }
 }
