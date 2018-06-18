@@ -4,12 +4,11 @@
     font-size: $font-size-default;
     max-width: 402px;
     width: 100%;
-    padding: 30px;
+    padding: 20px 30px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba($font-color-grey, .2);        
-
+    
     &__content {
-        color: $font-color-grey;
+        color: $color-text;
         margin-bottom: 30px;
 
         &-header {
@@ -49,15 +48,15 @@
 
         &-input {
             width: 160px;
-            height: 50px;
+            height: 60px;
             font-size: $font-size-default;
             font-weight: 700;
             border: 1px solid $color-grey;
-            border-radius: 3px;
+            border-radius: 5px;
             padding-left: 10px;
 
             &:focus {
-                background: #fffaaa;
+                background: darken($color-white-dark, 10%);
             }
 
             @media (max-width: 402px) {
@@ -68,15 +67,15 @@
 
         &-button {
             width: 160px;
-            height: 50px;
+            height: 60px;
             font-size: $font-size-default;
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
             color: $color-white;
             background: $color-secondary;
 
             &:hover {
-                background: lighten($color-secondary, 20%)
+                background: darken($color-secondary, 10%);
             }
 
             @media (max-width: 402px) {

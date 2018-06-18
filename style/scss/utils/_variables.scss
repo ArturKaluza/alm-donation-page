@@ -3,15 +3,17 @@ $font-size-default: 22px;
 $font-size-big: 28px;
 $font-size-small: 20px;
 
-$font-color-grey: #555;
-$font-color-blue: #33A6D2;
+$font-color-grey: #424242;
+$font-color-blue: #75b8dd;
 
-$color-primary: #C04C0E;
-$color-secondary: #2D882D;
+$color-primary: #e16842;
+$color-secondary: #56ba3e;
 $color-white: #f4f4f4;
-$color-white-dark: #dfdfdf;
-$color-grey: #ccc;
-$color-grey-dark: #444;
+$color-white-dark: #fafafa;
+$color-grey: #dcdcdc;
+$color-grey-dark: #424242;
+$color-text: #8d8d8d;
+
 
 
 @mixin btn {
@@ -20,10 +22,10 @@ $color-grey-dark: #444;
     background: lighten($color-white-dark, 3%);
     border: 1px solid $color-grey;
     border-radius: 3px;
-    color: $font-color-grey;
+    color: $color-text;
     font-family: 'Alegreya Sans', sans-serif;
     font-size: $font-size-small;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba($font-color-grey, .2);
+    box-shadow: 0 2px 4px rgba($font-color-grey, .15);
 }
